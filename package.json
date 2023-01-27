@@ -1,0 +1,19 @@
+{
+  "name": "project3_server",
+  "version": "1.0.0",
+  "description": "The server side repo for project 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoxLegends/project3_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoxLegends/project3_server/issues"
+  },
+  "homepage": "https://github.com/BoxLegends/project3_server#readme"
+}
