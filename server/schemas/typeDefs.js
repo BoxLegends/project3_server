@@ -1,12 +1,12 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  type Devs {
-    _id: ID!
-    title: String!
-    name: String!
+  type Devs { 
+    _id: ID! 
+    title: String! 
+    name: String! 
     description: String! 
-    image: String
+    image: String 
   }
 
   type Teams {
