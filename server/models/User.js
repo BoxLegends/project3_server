@@ -1,10 +1,11 @@
 const { Schema, model } = require("mongoose");
 
-const devsSchema = new Schema(
+const userSchema = new Schema(
   {
   id: {
     type: String,
     required: true,
+    unique: true,
   },
 
   title: {
@@ -30,8 +31,20 @@ const devsSchema = new Schema(
     type: String,
     require: true,
   },
+
+  email: {
+    type: String,
+    require: true,
+    unique: true,
+    match: [/.+@.+\..+/, 'Must use a valid email address'],
+  },
+
+  password: {
+    type: String,
+    require: true,
+  }
 });
 
-const Devs = model("Devs", devsSchema);
+const Devs = model("Devs", userSchema);
 
-module.exports = Devs;
+module.exports = user;

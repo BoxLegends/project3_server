@@ -1,6 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { Devs } = require("../models");
-const { Teams } = require("../models");
+const { User } = require("../models");
+const { Team } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -15,8 +15,8 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    teams: async () => {
-      return Teams.find();
+    team: async () => {
+      return Team.find();
     },
 
     team: async (parent, { teamId }) => {
@@ -24,30 +24,30 @@ const resolvers = {
     },
 
 
-    devs: async () => {
-      return Devs.find();
+    user: async () => {
+      return User.find();
     },
 
-    dev: async (parent, { devId }) => {
-      return Devs.findOne({ _id: devId });
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
     },
   },
 
   Mutation: {
     addUser: async (parent, args) => {
-      const user = await Devs.create(args);
+      const user = await user.create(args);
       const token = signToken(user);
 
       return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const user = await Devs.findOne({ email });
+      const user = await User.findOne({ email });
 
       if (!user) {
         throw new AuthenticationError("Incorrect credentials");
       }
 
-      const correctPw = await Devs.isCorrectPassword(password);
+      const correctPw = await User.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError("Incorrect credentials");

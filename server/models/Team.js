@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const memberSchema = require('./Devs');
+const memberSchema = require('./User');
 
 const teamsSchema = new Schema({
   id: {
