@@ -1,19 +1,35 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { Devs } = require("../models");
+const { Teams } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        const devsData = await Devs.findOne({ _id: context.user._id }).select(
-          "-__v -password"
-        );
+        const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
 
-        return devsData;
+        return userData;
       }
 
-      throw new AuthenticationError("Not logged in");
+      throw new AuthenticationError('Not logged in');
+    },
+
+    teams: async () => {
+      return Teams.find();
+    },
+
+    team: async (parent, { teamId }) => {
+      return Profile.findOne({ _id: teamId });
+    },
+
+
+    devs: async () => {
+      return Devs.find();
+    },
+
+    dev: async (parent, { devId }) => {
+      return Devs.findOne({ _id: devId });
     },
   },
 
