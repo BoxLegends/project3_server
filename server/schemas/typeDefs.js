@@ -21,6 +21,7 @@ const typeDefs = gql`
   }
 
   type Query {
+    me: User
     teams: [Team]!
     team: [User]!
     user(userId: ID!): User
