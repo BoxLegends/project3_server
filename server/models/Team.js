@@ -1,14 +1,14 @@
 const { Schema, model } = require("mongoose");
 
-const memberSchema = require('./User');
+const memberSchema = require("./User");
 
-const teamsSchema = new Schema({
+const teamSchema = new Schema({
   id: {
     type: String,
     require: true,
     unique: true,
   },
-  
+
   name: {
     type: String,
     required: true,
@@ -21,9 +21,8 @@ const teamsSchema = new Schema({
   },
 
   teamMembers: [memberSchema],
-
 });
 
-const Teams = model("Teams", teamsSchema);
+const Team = model("Team", teamSchema);
 
-module.exports = Teams;
+module.exports = Team;

@@ -1,5 +1,5 @@
 const User = require("./User");
-const Teams = require("./Team");
+const Team = require("./Team");
 const Login = require("./Login");
 
-module.exports = { User, Teams, Login };
+module.exports = { User, Team, Login };
