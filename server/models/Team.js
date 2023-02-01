@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const memberSchema = require("./User");
+const userSchema = require("./User");
 
 const teamSchema = new Schema({
   id: {
@@ -20,7 +20,7 @@ const teamSchema = new Schema({
     required: false,
   },
 
-  teamMembers: [memberSchema],
+  //teamMembers: [userSchema],
 });
 
 const Team = model("Team", teamSchema);

@@ -12,7 +12,7 @@ const typeDefs = gql`
   type Team {
     _id: ID!
     title: String!
-    members: [member]!
+    users: [User]!
   }
 
   type Auth {
@@ -21,9 +21,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    teams: [team]!
+    teams: [Team]!
     team: [User]!
-    member(memberId: ID!): member
+    user(userId: ID!): User
   }
 
   type Mutation {
