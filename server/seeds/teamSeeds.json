@@ -1,0 +1,29 @@
+[
+
+{
+    "id": "1",
+    "name": "Devs List",
+    "description": "making an app where developers can sign up and uplod a profile for vewing! "
+  },
+  {
+    "id": "2",
+    "name": "team 2",
+    "description": "project info"
+  },
+  {
+    "id": "3",
+    "name": "team 3",
+    "description": "project info"
+  },
+  {
+    "id": "4",
+    "name": "team 4",
+    "description": "project info"
+  },
+  {
+    "id": "5",
+    "name": "team 5",
+    "description": "project info"
+  }
+
+]
