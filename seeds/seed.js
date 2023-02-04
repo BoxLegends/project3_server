@@ -1,15 +1,15 @@
 const db = require('../config/connection');
-const { teams } = require('../models/Team');
+const { Team } = require('../models');
 const teamSeeds = require('./teamSeeds.json');
-const { user } = require('../models/User');
+const { User } = require('../models');
 const userSeeds = require('./UserSeeds.json')
 
 db.once('open', async () => {
-  await teams.deleteMany({});
-  await teams.create(teamSeeds);
+  await Team.deleteMany({});
+  await Team.insertMany(teamSeeds);
 
-  await user.deleteMany({});
-  await user.create(userSeeds);
+  await User.deleteMany({});
+  await User.insertMany(userSeeds);
 
   console.log('all done!');
   process.exit(0);

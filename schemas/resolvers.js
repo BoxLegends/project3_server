@@ -15,16 +15,16 @@ const resolvers = {
       throw new AuthenticationError('Not logged in');
     },
 
-    team: async () => {
+    teams: async () => {
       return Team.find();
     },
 
     team: async (parent, { teamId }) => {
-      return Profile.findOne({ _id: teamId });
+      return Team.findOne({ _id: teamId });
     },
 
 
-    user: async () => {
+    users: async () => {
       return User.find();
     },
 
