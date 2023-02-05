@@ -37,6 +37,14 @@ const userSchema = new Schema({
     type: String,
     require: true,
   },
+
+  project1: {
+    type: String,
+  },
+
+  project2: {
+    type: String,
+  },
 });
 
 userSchema.pre('save', async function (next) {
