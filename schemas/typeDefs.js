@@ -9,7 +9,7 @@ const typeDefs = gql`
     image: String
     project1: String
     project2: String
-    team: string
+    team: String
   }
 
   type Team {
