@@ -9,13 +9,14 @@ const typeDefs = gql`
     image: String
     project1: String
     project2: String
+    team: string
   }
 
   type Team {
     _id: ID!
     name: String!
     description: String
-    users: [User]
+    teamMembers: [User]
   }
 
   type Auth {

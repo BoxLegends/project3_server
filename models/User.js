@@ -12,7 +12,11 @@ const userSchema = new Schema({
     required: true,
   },
 
-  link: {
+  project1: {
+    type: String,
+  },
+
+  project2: {
     type: String,
   },
 
@@ -38,13 +42,10 @@ const userSchema = new Schema({
     require: true,
   },
 
-  project1: {
+  team: {
     type: String,
   },
 
-  project2: {
-    type: String,
-  },
 });
 
 userSchema.pre('save', async function (next) {
