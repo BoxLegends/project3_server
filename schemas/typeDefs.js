@@ -7,8 +7,7 @@ const typeDefs = gql`
     name: String!
     description: String
     image: String
-    project1: String
-    project2: String
+    portfolioLink: String
     team: String
   }
 

@@ -12,11 +12,7 @@ const userSchema = new Schema({
     required: true,
   },
 
-  project1: {
-    type: String,
-  },
-
-  project2: {
+  portfolioLink: {
     type: String,
   },
 

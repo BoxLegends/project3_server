@@ -4,11 +4,20 @@
     "id": "1",
     "title": "Developer",
     "name": "Nick",
-    "link": "",
+    "portfolioLink": "",
     "description": "I am an aspiring devloper learning how to build full stack applications and websites. I am hoping to work as a junior devloper for a compay sometime soon!",
     "image": "",
     "email": "Nick_burns11@hotmail.com"
+  },
 
+  {
+    "id": "2",
+    "title": "Developer",
+    "name": "Jared",
+    "portfolioLink": "https://jareding87.github.io/react_portfolio/",
+    "description": "I am a new developer looking to begin a career in web design.",
+    "image": "",
+    "email": "jaredingersoll@gmail.com"
   }
 
 
