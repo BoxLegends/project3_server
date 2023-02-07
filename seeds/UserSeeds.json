@@ -20,5 +20,25 @@
     "email": "jaredingersoll@gmail.com"
   }
 
+{
+    "id": "3",
+    "title": "Developer",
+    "name": "John",
+    "portfolioLink": "https://github.com/jwill5432",
+    "description": "I hope to one day be a succesful developer creating important technology.",
+    "image": "",
+    "email": "jwill21345@gmail.com"
+  }
+
+  {
+    "id": "4",
+    "title": "Developer",
+    "name": "Sebastian",
+    "portfolioLink": "https://sebastiancruz01.github.io/Responsive-Portfolio/",
+    "description": " Developer learning some new skills everyday.",
+    "image": "",
+    "email": "SebastianCruz01@gmail.com"
+  }
+
 
 ]
