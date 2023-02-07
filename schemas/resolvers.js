@@ -16,7 +16,7 @@ const resolvers = {
     },
 
     teams: async () => {
-      return Team.find();
+    return Team.find({}).populate('teamMembers');
     },
 
     team: async (parent, { teamId }) => {
