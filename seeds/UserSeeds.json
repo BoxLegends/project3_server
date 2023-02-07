@@ -47,5 +47,16 @@
     "description": "I am an aspiring Web Developer and Game Designer.",
     "image": "",
     "email": "jorgefuster05@gmail.com"
+  },
+
+  {
+  "id": "6",
+  "title": "Developer",
+  "name": "Yorlan",
+  "portfolioLink": "https://github.com/Yorlan-r/React-Portfolio.git",
+  "description": "I'm an aspiring Software Developer, currently a student at Rutger's Bootcam looking to further develop my knowledge and work as a Developer for a company",
+  "image": "",
+  "email": "Yorlan_Ramirez5493@hotmail.com"
   }
+
 ]
